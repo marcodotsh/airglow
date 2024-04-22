@@ -12,11 +12,10 @@ RELEASE="$(rpm -E %fedora)"
 # List of rpmfusion packages can be found here:
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
-# this installs a package from fedora repos
-#rpm-ostree install screen
-
-# this would install a package from rpmfusion
-#RUN rpm-ostree install vlc
+# Install sunshine from pre built package with DMA-BUF sharing for VAAPI support (pull #2053)
+# binary artifact has expired, rebuilding for now and adding this package manually
+rpm-ostree install /tmp/rpms/sunshine.rpm
+systemctl enable sunshine-workaround.service
 
 
 
