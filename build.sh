@@ -20,6 +20,6 @@ systemctl enable sunshine-workaround.service
 
 # Install missing dependencies for qickemu
 # Later installed in the Containerfile from source
-rpm-ostree install edk2-tools lsb procps spice-gtk-tools swtpm wget
+rpm-ostree install edk2-tools procps spice-gtk-tools swtpm wget
 
 
