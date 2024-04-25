@@ -18,7 +18,7 @@ rpm-ostree install /tmp/rpms/sunshine-fedora-40-amd64.rpm
 systemctl enable sunshine-workaround.service
 
 
-# Install missing dependencies for qickemu
-rpm-ostree install edk2-tools procps spice-gtk-tools swtpm wget
+# Install gnome-boxes
+rpm-ostree install gnome-boxes
 
 
