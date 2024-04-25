@@ -19,14 +19,6 @@ RUN mkdir -p /var/lib/alternatives && \
     /tmp/build.sh && \
     ostree container commit
 
-## Install quickemu from source
-WORKDIR /tmp
-RUN git clone --filter=blob:none https://github.com/quickemu-project/quickemu
-WORKDIR /tmp/quickemu
-RUN make install && \
-    ostree container commit
-
-
 ## NOTES:
 # - /var/lib/alternatives is required to prevent failure with some RPM installs
 # - All RUN commands must end with ostree container commit
