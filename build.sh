@@ -17,8 +17,6 @@ RELEASE="$(rpm -E %fedora)"
 rpm-ostree install /tmp/rpms/sunshine-fedora-40-amd64.rpm
 systemctl enable sunshine-workaround.service
 
-
-# Install gnome-boxes
-rpm-ostree install gnome-boxes
-
+# Install kdenetwork-filesharing to enable network share in dolphin
+rpm-ostree install kdenetwork-filesharing
 
