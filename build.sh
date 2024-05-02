@@ -16,10 +16,12 @@ RELEASE="$(rpm -E %fedora)"
 # binary artifact has expired, rebuilding for now and adding this package manually
 rpm-ostree install /tmp/rpms/sunshine-fedora-40-amd64.rpm
 systemctl enable sunshine-workaround.service
+ostree container commit
 
 # Install kdenetwork-filesharing to enable network share in dolphin
 rpm-ostree install kdenetwork-filesharing samba-usershares
+ostree container commit
 
-# Install mate-polkit because of a bug with kde one and goldwarden
-rpm-ostree install mate-polkit
+# Install goldwarden
+rpm-ostree install https://github.com/quexten/goldwarden/releases/download/v0.2.16/goldwarden-0.2.16-1.el7.x86_64.rpm
 
