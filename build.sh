@@ -20,3 +20,6 @@ systemctl enable sunshine-workaround.service
 # Install kdenetwork-filesharing to enable network share in dolphin
 rpm-ostree install kdenetwork-filesharing samba-usershares
 
+# Install mate-polkit because of a bug with kde one and goldwarden
+rpm-ostree install mate-polkit
+
