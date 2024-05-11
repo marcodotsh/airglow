@@ -12,8 +12,6 @@ COPY system_files /
 
 COPY build.sh /tmp/build.sh
 
-COPY zerotier.sh /tmp/zerotier.sh
-
 COPY rpms /tmp/rpms
 
 COPY scripts /tmp/scripts
