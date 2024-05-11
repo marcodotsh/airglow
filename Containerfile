@@ -12,11 +12,9 @@ COPY system_files /
 
 COPY build.sh /tmp/build.sh
 
+COPY zerotier.sh /tmp/zerotier.sh
+
 COPY rpms /tmp/rpms
-
-RUN mkdir -p /tmp/scripts
-
-COPY scripts /tmp/scripts
 
 ## Run customization from a bash script
 RUN mkdir -p /var/lib/alternatives && \

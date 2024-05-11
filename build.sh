@@ -27,5 +27,5 @@ rpm-ostree install https://github.com/quexten/goldwarden/releases/download/v0.2.
 ostree container commit
 
 # Install zerotier
-bash /tmp/scripts/zerotier.sh
+bash /tmp/zerotier.sh
 
