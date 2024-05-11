@@ -14,12 +14,15 @@ COPY build.sh /tmp/build.sh
 
 COPY rpms /tmp/rpms
 
-COPY scripts /tmp/scripts
-
 ## Run customization from a bash script
 RUN mkdir -p /var/lib/alternatives && \
     /tmp/build.sh && \
-    /tmp/scripts/zerotier.sh && \
+    ostree container commit
+
+# Run other scripts
+COPY scripts /tmp/scripts
+
+RUN bash /tmp/scripts/zerotier.sh && \
     ostree container commit
 
 ## NOTES:
