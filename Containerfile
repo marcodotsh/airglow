@@ -16,9 +16,12 @@ COPY zerotier.sh /tmp/zerotier.sh
 
 COPY rpms /tmp/rpms
 
+COPY scripts /tmp/scripts
+
 ## Run customization from a bash script
 RUN mkdir -p /var/lib/alternatives && \
     /tmp/build.sh && \
+    /tmp/scripts/zerotier.sh && \
     ostree container commit
 
 ## NOTES:
