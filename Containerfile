@@ -14,7 +14,7 @@ COPY build.sh /tmp/build.sh
 
 COPY rpms /tmp/rpms
 
-COPY scripts /tmp/scripts
+COPY scripts/zerotier.sh /tmp/scripts/
 
 ## Run customization from a bash script
 RUN mkdir -p /var/lib/alternatives && \
