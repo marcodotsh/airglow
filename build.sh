@@ -26,6 +26,3 @@ ostree container commit
 rpm-ostree install https://github.com/quexten/goldwarden/releases/download/v0.2.16/goldwarden-0.2.16-1.el7.x86_64.rpm
 ostree container commit
 
-# Install openjfx
-rpm-ostree install openjfx
-
