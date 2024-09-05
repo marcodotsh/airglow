@@ -1,9 +1,9 @@
-ARG SOURCE_IMAGE=${BASE_IMAGE_NAME:-aurora-dx}
+ARG BASE_IMAGE_NAME=${BASE_IMAGE_NAME:-aurora-dx}
 
 ARG FEDORA_VERSION="latest"
 
 
-FROM ghcr.io/ublue-os/${SOURCE_IMAGE}:${FEDORA_VERSION}
+FROM ghcr.io/ublue-os/${BASE_IMAGE_NAME}:${FEDORA_VERSION}
 
 ## Copy system files
 COPY system_files /
