@@ -26,3 +26,8 @@ ostree container commit
 rpm-ostree install https://github.com/quexten/goldwarden/releases/download/v0.2.16/goldwarden-0.2.16-1.el7.x86_64.rpm
 ostree container commit
 
+### Configuration
+
+# Configure it keyboard layout to support scroll lock for backlight keyboard
+sed -i '0,/.*include "level3(ralt_switch).*/s/.*include "level3(ralt_switch).*/    \/\/ Enable led on Kit Devastator Keyboard\n    modifier_map Mod3 { Scroll_Lock };\n\n&/' /usr/share/X11/xkb/symbols/it
+
