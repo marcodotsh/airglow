@@ -16,18 +16,15 @@ RELEASE="$(rpm -E %fedora)"
 # binary artifact has expired, rebuilding for now and adding this package manually
 rpm-ostree install /tmp/rpms/sunshine-fedora-40-amd64.rpm
 systemctl enable sunshine-workaround.service
-ostree container commit
 
 # Install kdenetwork-filesharing to enable network share in dolphin
 rpm-ostree install kdenetwork-filesharing samba-usershares
-ostree container commit
 
 # Install goldwarden
 rpm-ostree install https://github.com/quexten/goldwarden/releases/download/v0.2.16/goldwarden-0.2.16-1.el7.x86_64.rpm
-ostree container commit
 
-### Configuration
-
-# Configure it keyboard layout to support scroll lock for backlight keyboard
-sed -i '0,/.*include "level3(ralt_switch).*/s/.*include "level3(ralt_switch).*/    \/\/ Enable led on Kit Devastator Keyboard\n    modifier_map Mod3 { Scroll_Lock };\n\n&/' /usr/share/X11/xkb/symbols/it
-
+# Install Papirus Icon Theme
+cd $(mktemp -d)
+git clone https://github.com/PapirusDevelopmentTeam/papirus-icon-theme.git
+cp papirus-icon-theme/Papirus-Dark /usr/share/icons/Papirus-Dark
+rm -rf papirus-icon-theme

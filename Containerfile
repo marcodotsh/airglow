@@ -8,19 +8,21 @@ FROM ghcr.io/ublue-os/${BASE_IMAGE_NAME}:${FEDORA_VERSION}
 ## Copy system files
 COPY system_files /
 
-COPY build.sh /tmp/build.sh
+COPY build_files /tmp/build_files
 
 COPY rpms /tmp/rpms
 
 ## Run customization from a bash script
 RUN mkdir -p /var/lib/alternatives && \
-    /tmp/build.sh && \
+    /tmp/build_files/packages.sh && \
+    /tmp/build_files/keyboard-config.sh && \
+    /tmp/build_files/airglow-changes.sh && \
     ostree container commit
 
-# Run other scripts
-COPY scripts /tmp/scripts
+# Copy again scripts, after memory intensive operation they could have been deleted
+COPY build_files /tmp/build_files
 
-RUN bash /tmp/scripts/zerotier.sh && \
+RUN bash /tmp/build_files/zerotier.sh && \
     ostree container commit
 
 ## NOTES:
