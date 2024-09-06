@@ -26,5 +26,5 @@ rpm-ostree install https://github.com/quexten/goldwarden/releases/download/v0.2.
 # Install Papirus Icon Theme
 cd $(mktemp -d)
 git clone https://github.com/PapirusDevelopmentTeam/papirus-icon-theme.git
-cp papirus-icon-theme/Papirus-Dark /usr/share/icons/Papirus-Dark
+mv papirus-icon-theme/Papirus-Dark /usr/share/icons/Papirus-Dark
 rm -rf papirus-icon-theme
