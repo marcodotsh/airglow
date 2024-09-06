@@ -9,4 +9,4 @@ sed -i '/<entry name="launchers" type="StringList">/,/<\/entry>/ s/<default>[^<]
 # Set kickoff menu icons
 #sed -i '/<entry name="favorites" type="StringList">/,/<\/entry>/ s/<default>[^<]*<\/default>/<default>preferred:\/\/browser,systemsettings.desktop,org.kde.dolphin.desktop,org.kde.kate.desktop,org.gnome.Ptyxis.desktop,org.kde.discover.desktop<\/default>/' /usr/share/plasma/plasmoids/org.kde.plasma.kickoff/contents/config/main.xml
 # Set icon theme
-sed '/\[Icons\]/,// s/^Theme=.*/Theme=Papirus-Dark/' /usr/share/kde-settings/kde-profile/default/share/config/kdeglobals
+sed -i '/\[Icons\]/,// s/^Theme=.*/Theme=Papirus-Dark/' /usr/share/kde-settings/kde-profile/default/share/config/kdeglobals
