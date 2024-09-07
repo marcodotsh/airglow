@@ -1,0 +1,26 @@
+{
+    "KPackageStructure": "Plasma/LayoutTemplate",
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "davidedmundson@kde.org",
+                "Name": "David Edmundson",
+                "Name[he]": "דיויד אדמונדסון",
+                "Name[ka]": "დავიდ ედმუნდსონი",
+                "Name[ta]": "டேவிட் எட்மண்டுஸன்",
+                "Name[x-test]": "xxDavid Edmundsonxx"
+            }
+        ],
+        "Category": "",
+        "Description": "Default dock",
+        "EnabledByDefault": true,
+        "Id": "org.kde.plasma.desktop.defaultDock",
+        "License": "LGPLv2+",
+        "Name": "Default dock",
+        "Website": "https://www.kde.org/plasma-desktop"
+    },
+    "X-Plasma-ContainmentCategories": [
+        "panel"
+    ],
+    "X-Plasma-Shell": "plasmashell"
+}
