@@ -39,3 +39,7 @@ kpackagetool6 --type KWin/Script --global --install polonium-kwinscript.zip
 curl -L https://github.com/peterfajdiga/kwin4_effect_geometry_change/releases/download/v1.3/kwin4_effect_geometry_change_1_3.tar.gz -o kwin4_effect_geometry_change_1_3.tar.gz
 kpackagetool6 --type KWin/Effect --global --install kwin4_effect_geometry_change_1_3.tar.gz
 
+# Install window title applet to get current window icon widget
+curl -L https://github.com/dhruv8sh/plasma6-window-title-applet/archive/refs/heads/master.zip -o plasma6-window-title-applet.zip
+kpackagetool6 --type Plasma/Applet --global --install plasma6-window-title-applet.zip
+
