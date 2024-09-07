@@ -29,3 +29,8 @@ git clone https://github.com/PapirusDevelopmentTeam/papirus-icon-theme.git
 mv papirus-icon-theme/Papirus /usr/share/icons/Papirus
 mv papirus-icon-theme/Papirus-Dark /usr/share/icons/Papirus-Dark
 rm -rf papirus-icon-theme
+
+# Install polonium KWin script for tiling
+cd $(mktemp -d)
+curl -L https://github.com/zeroxoneafour/polonium/releases/latest/download/polonium.kwinscript -o polonium-kwinscript.zip
+plasmapkg --install --global polonium-kwinscript.zip
