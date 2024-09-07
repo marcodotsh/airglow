@@ -32,5 +32,5 @@ rm -rf papirus-icon-theme
 
 # Install polonium KWin script for tiling
 cd $(mktemp -d)
-curl -L https://github.com/zeroxoneafour/polonium/releases/nightly/download/polonium.kwinscript -o polonium-kwinscript.zip
+curl -L https://github.com/zeroxoneafour/polonium/releases/download/nightly/polonium.kwinscript -o polonium-kwinscript.zip
 kpackagetool6 --type KWin/Script --global --install polonium-kwinscript.zip
