@@ -34,3 +34,8 @@ rm -rf papirus-icon-theme
 cd $(mktemp -d)
 curl -L https://github.com/zeroxoneafour/polonium/releases/download/nightly/polonium.kwinscript -o polonium-kwinscript.zip
 kpackagetool6 --type KWin/Script --global --install polonium-kwinscript.zip
+
+# Install Geometry Change effect for smooth animations
+curl -L https://github.com/peterfajdiga/kwin4_effect_geometry_change/releases/download/v1.3/kwin4_effect_geometry_change_1_3.tar.gz -o kwin4_effect_geometry_change_1_3.tar.gz
+kpackagetool6 --type KWin/Effect --global --install kwin4_effect_geometry_change_1_3.tar.gz
+
