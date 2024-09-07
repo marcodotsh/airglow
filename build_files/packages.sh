@@ -31,6 +31,6 @@ mv papirus-icon-theme/Papirus-Dark /usr/share/icons/Papirus-Dark
 rm -rf papirus-icon-theme
 
 # Install polonium KWin script for tiling
-
-curl -Lo /etc/yum.repos.d/eclipseo-polonium-fedora-$(cat /etc/os-release | grep VERSION_ID | cut -d '=' -f 2).repo https://copr.fedorainfracloud.org/coprs/eclipseo/polonium/repo/fedora-$(cat /etc/os-release | grep VERSION_ID | cut -d '=' -f 2)/eclipseo-polonium-fedora-$(cat /etc/os-release | grep VERSION_ID | cut -d '=' -f 2).repo
-rpm-ostree install polonium
+cd $(mktemp -d)
+curl -L https://github.com/zeroxoneafour/polonium/releases/nightly/download/polonium.kwinscript -o polonium-kwinscript.zip
+kpackagetool6 --type KWin/Script --global --install polonium-kwinscript.zip
