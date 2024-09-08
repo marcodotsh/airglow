@@ -1,2 +1,9 @@
 [Libinput][2][14][ETPS/2 Elantech Touchpad]
 NaturalScroll=true
+
+[Libinput][2][14][ETPS/2 Elantech Touchpad]
+NaturalScroll=true
+
+[Libinput][2362][628][PIXA3854:00 093A:0274 Touchpad]
+NaturalScroll=true
+TapToClick=true

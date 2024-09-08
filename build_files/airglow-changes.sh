@@ -30,3 +30,6 @@ sed -i '/<entry name="scrollAllowed"/,/<\/entry>/ s/<default>[^<]*<\/default>/<d
 # Change icons only task manager default settings
 sed -i '/<entry name="showOnlyCurrentDesktop"/,/<\/entry>/ s/<default>[^<]*<\/default>/<default>false<\/default>/' /usr/share/plasma/plasmoids/org.kde.plasma.taskmanager/contents/config/main.xml
 sed -i '/<entry name="wheelEnabled"/,/<\/entry>/ s/<default>[^<]*<\/default>/<default>false<\/default>/' /usr/share/plasma/plasmoids/org.kde.plasma.taskmanager/contents/config/main.xml
+
+# Add to ujust airglow entries
+echo 'import "/usr/share/ublue-os/just/80-airglow.just"' >> /usr/share/ublue-os/justfile
