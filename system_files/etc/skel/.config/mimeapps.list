@@ -1,0 +1,5 @@
+[Added Associations]
+x-scheme-handler/mailto=org.mozilla.Thunderbird.desktop;
+
+[Default Applications]
+x-scheme-handler/mailto=org.mozilla.Thunderbird.desktop;

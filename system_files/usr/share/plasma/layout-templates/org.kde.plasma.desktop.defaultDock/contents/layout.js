@@ -25,7 +25,13 @@ if (freeEdges["bottom"] == true) {
     panel.location = "top";
 }
 
-panel.height = gridUnit * 2
+// For an Icons-Only Task Manager on the bottom, *3 is too much, *2 is too little
+// Round down to next highest even number since the Panel size widget only displays
+// even numbers
+panel.height = 2 * Math.floor(gridUnit * 4 / 3)
+
+dock.alignment = "center"
+dock.hiding = "dodgewindows"
+dock.lengthMode = "fit"
 
 panel.addWidget("org.kde.plasma.icontasks")
-

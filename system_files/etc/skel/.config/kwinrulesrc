@@ -1,0 +1,7 @@
+[71527756-935d-4752-94c5-6ee772c70d51]
+Description=ignore geometry
+strictgeometryrule=2
+
+[General]
+count=1
+rules=71527756-935d-4752-94c5-6ee772c70d51

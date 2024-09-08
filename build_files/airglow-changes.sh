@@ -11,6 +11,7 @@ sed -i '/<entry name="launchers" type="StringList">/,/<\/entry>/ s/<default>[^<]
 # Set icon theme
 sed -i '/\[Icons\]/,// s/^Theme=.*/Theme=Papirus-Dark/' /usr/share/kde-settings/kde-profile/default/share/config/kdeglobals
 sed -i '/\Icon Theme\]/,// s/^Inherits=.*/Inherits=breeze_cursors,Papirus-Dark/' /usr/share/icons/default/index.theme
+sed -i '/\[Icons\]/,// s/^Theme=.*/Theme=Papirus-Dark/' /usr/share/plasma/look-and-feel/dev.getaurora.aurora.desktop/contents/defaults
 
 # Change pager default settings
 sed -i '/<entry name="displayedText" type="Enum">/,/<\/entry>/ s/<default>[^<]*<\/default>/<default>0<\/default>/' /usr/share/plasma/plasmoids/org.kde.plasma.pager/contents/config/main.xml
