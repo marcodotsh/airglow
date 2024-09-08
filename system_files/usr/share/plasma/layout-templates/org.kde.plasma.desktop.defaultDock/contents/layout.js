@@ -30,8 +30,8 @@ if (freeEdges["bottom"] == true) {
 // even numbers
 panel.height = 2 * Math.floor(gridUnit * 4 / 3)
 
-dock.alignment = "center"
-dock.hiding = "dodgewindows"
-dock.lengthMode = "fit"
+panel.alignment = "center"
+panel.hiding = "dodgewindows"
+panel.lengthMode = "fit"
 
 panel.addWidget("org.kde.plasma.icontasks")
