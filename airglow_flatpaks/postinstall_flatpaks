@@ -1,3 +1,16 @@
+app/org.kde.kcalc/x86_64/stable
+app/org.kde.filelight/x86_64/stable
+app/com.github.tchx84.Flatseal/x86_64/stable
+app/io.github.flattool.Warehouse/x86_64/stable
+app/io.missioncenter.MissionCenter/x86_64/stable
+app/org.gnome.DejaDup/x86_64/stable
+app/org.gnome.World.PikaBackup/x86_64/stable
+app/dev.deedles.Trayscale/x86_64/stable
+app/com.github.zocker_160.SyncThingy/x86_64/stable
+app/org.kde.kontact/x86_64/stable
+app/org.kde.kweather/x86_64/stable
+app/org.kde.kclock/x86_64/stable
+
 app/com.bitwarden.desktop/x86_64/stable
 app/com.github.xournalpp.xournalpp/x86_64/stable
 app/com.moonlight_stream.Moonlight/x86_64/stable
