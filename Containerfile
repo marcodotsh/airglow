@@ -17,6 +17,7 @@ RUN mkdir -p /var/lib/alternatives && \
     /tmp/build_files/packages.sh && \
     /tmp/build_files/keyboard-config.sh && \
     /tmp/build_files/airglow-changes.sh && \
+    /tmp/build_files/build-initramfs.sh && \
     ostree container commit
 
 # Copy again scripts, after memory intensive operation they could have been deleted
