@@ -43,3 +43,5 @@ kpackagetool6 --type KWin/Effect --global --install kwin4_effect_geometry_change
 curl -L https://github.com/dhruv8sh/plasma6-window-title-applet/archive/refs/heads/master.zip -o plasma6-window-title-applet.zip
 kpackagetool6 --type Plasma/Applet --global --install plasma6-window-title-applet.zip
 
+# Install clevis-dracut to use tang LUKS unlock over home network
+rpm-ostree install clevis-dracut
