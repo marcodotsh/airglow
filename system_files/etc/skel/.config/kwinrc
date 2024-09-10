@@ -20,6 +20,12 @@ Borders=3
 EngineType=1
 InsertionPoint=1
 
+[TabBox]
+DesktopMode=0
+
+[TabBoxAlternative]
+DesktopMode=0
+
 [Tiling]
 padding=4
 
