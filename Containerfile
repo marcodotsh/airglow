@@ -10,7 +10,7 @@ COPY system_files /
 
 COPY build_files /tmp/build_files
 
-COPY rpms /tmp/rpms
+#COPY rpms /tmp/rpms
 
 ## Run customization from a bash script
 RUN mkdir -p /var/lib/alternatives && \
