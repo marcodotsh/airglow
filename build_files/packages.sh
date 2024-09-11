@@ -14,8 +14,7 @@ RELEASE="$(rpm -E %fedora)"
 
 # Install sunshine from pre built package with DMA-BUF sharing for VAAPI support (pull #2053)
 # binary artifact has expired, rebuilding for now and adding this package manually
-rpm-ostree install /tmp/rpms/sunshine-fedora-40-amd64.rpm
-rpm-ostree install boost-locale boost-log
+rpm-ostree install https://github.com/LizardByte/Sunshine/releases/download/$(curl -s https://api.github.com/repos/LizardByte/Sunshine/tags | jq -r '.[0].name')/sunshine-fedora-40-amd64.rpm
 systemctl enable sunshine-workaround.service
 
 # Install kdenetwork-filesharing to enable network share in dolphin
