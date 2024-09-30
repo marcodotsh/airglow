@@ -279,7 +279,10 @@ if [ ! -f /etc/os-release ]; then
 fi
 
 source /etc/os-release
-cat /etc/os-release
+
+if [ -n $ID_LIKE ]
+        ID=$ID_LIKE
+fi
 
 if [ $ID == "debian" ] || [ $ID == "raspbian" ]; then
 	echo '*** Detected Debian Linux, creating /etc/apt/sources.list.d/zerotier.list'
