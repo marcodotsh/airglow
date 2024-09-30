@@ -280,7 +280,7 @@ fi
 
 source /etc/os-release
 
-if [ -n $ID_LIKE ]
+if [ -n $ID_LIKE ]; then
         ID=$ID_LIKE
 fi
 
