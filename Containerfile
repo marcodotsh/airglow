@@ -14,6 +14,7 @@ COPY build_files /tmp/build_files
 
 ## Run customization from a bash script
 RUN mkdir -p /var/lib/alternatives && \
+    /tmp/build_files/copr-repos.sh && \
     /tmp/build_files/packages.sh && \
     /tmp/build_files/keyboard-config.sh && \
     /tmp/build_files/airglow-changes.sh && \
