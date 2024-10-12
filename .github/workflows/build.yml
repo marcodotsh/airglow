@@ -36,6 +36,8 @@ jobs:
           - main
           - nvidia
           - surface
+        fedora_version:
+          - 40
 
     steps:
       # Checkout push-to-registry action GitHub repository
@@ -118,6 +120,7 @@ jobs:
           image: ${{ env.IMAGE_NAME }}
           build-args: |
             BASE_IMAGE_NAME=${{ env.BASE_IMAGE_NAME }}
+            FEDORA_MAJOR_VERSION=${{ matrix.fedora_version }}
           tags: |
             ${{ steps.generate-tags.outputs.alias_tags }}
           labels: ${{ steps.meta.outputs.labels }}
