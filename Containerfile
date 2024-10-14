@@ -3,8 +3,6 @@ ARG FEDORA_MAJOR_VERSION=${FEDORA_MAJOR_VERSION:-40}
 
 FROM ghcr.io/ublue-os/${BASE_IMAGE_NAME}:${FEDORA_MAJOR_VERSION}
 
-ARG FEDORA_MAJOR_VERSION=${FEDORA_MAJOR_VERSION:-40}
-
 ## Copy system files
 COPY system_files /
 
@@ -12,6 +10,7 @@ COPY build_files /tmp/build_files
 
 #COPY rpms /tmp/rpms
 
+ARG FEDORA_MAJOR_VERSION=${FEDORA_MAJOR_VERSION:-40}
 ## Run customization from a bash script
 RUN mkdir -p /var/lib/alternatives && \
     /tmp/build_files/copr-repos.sh && \
