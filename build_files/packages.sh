@@ -17,6 +17,9 @@ RELEASE="$(rpm -E %fedora)"
 rpm-ostree install Sunshine 
 systemctl enable sunshine-workaround.service
 
+# Install drm-utils for modetest command (DRM/KMS)
+rpm-ostree install drm-utils
+
 # Install kdenetwork-filesharing to enable network share in dolphin
 rpm-ostree install kdenetwork-filesharing samba-usershares
 
@@ -45,3 +48,4 @@ kpackagetool6 --type Plasma/Applet --global --install plasma6-window-title-apple
 
 # Install clevis-dracut to use tang LUKS unlock over home network
 rpm-ostree install clevis-dracut
+
