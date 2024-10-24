@@ -49,6 +49,3 @@ kpackagetool6 --type Plasma/Applet --global --install plasma6-window-title-apple
 # Install clevis-dracut to use tang LUKS unlock over home network
 rpm-ostree install clevis-dracut
 
-# Install webkit2gtk4.1 to support saber
-rpm-ostree install webkit2gtk4.1
-
