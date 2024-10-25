@@ -51,3 +51,6 @@ kpackagetool6 --type Plasma/Applet --global --install plasma6-window-title-apple
 # Install clevis-dracut to use tang LUKS unlock over home network
 rpm-ostree install clevis-dracut
 
+# Install libcamera to support surface cams
+rpm-ostree install libcamera libcamera-tools libcamera-gstreamer libcamera-ipa pipewire-plugin-libcamera
+
