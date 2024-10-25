@@ -25,7 +25,7 @@ rpm-ostree install kdenetwork-filesharing samba-usershares
 
 # Install goldwarden
 GOLDWARDEN_VERSION=$(curl -s https://api.github.com/repos/quexten/goldwarden/tags | jq -r '.[0].name')
-GOLDWARDEN_VERSION_NUMBER=$(echo GOLDWARDEN_VERSION | sed 's/v//')
+GOLDWARDEN_VERSION_NUMBER=$(echo $GOLDWARDEN_VERSION | sed 's/v//')
 rpm-ostree install "https://github.com/quexten/goldwarden/releases/download/$GOLDWARDEN_VERSION/goldwarden-$GOLDWARDEN_VERSION_NUMBER-1.el7.x86_64.rpm"
 
 # Install Papirus Icon Theme
