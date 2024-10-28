@@ -54,3 +54,5 @@ rpm-ostree install clevis-dracut
 # Install libcamera to support surface cams
 rpm-ostree install libcamera libcamera-tools libcamera-gstreamer libcamera-ipa pipewire-plugin-libcamera
 
+# Install kalendar
+rpm-ostree install kalendar
