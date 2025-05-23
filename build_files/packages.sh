@@ -55,11 +55,4 @@ rpm-ostree install clevis-dracut
 rpm-ostree install libcamera libcamera-tools libcamera-gstreamer libcamera-ipa pipewire-plugin-libcamera
 
 # Install merkuro (KDE calendar, tasks, contacts)
-rpm-ostree install akonadi merkuro korganizer
-
-# Install waydroid
-rpm-ostree install waydroid
-sed -i~ -E 's/=.\$\(command -v (nft|ip6?tables-legacy).*/=/g' /usr/lib/waydroid/data/scripts/waydroid-net.sh
-curl -Lo /usr/bin/waydroid-choose-gpu https://raw.githubusercontent.com/KyleGospo/waydroid-scripts/main/waydroid-choose-gpu.sh
-chmod +x /usr/bin/waydroid-choose-gpu
-
+rpm-ostree install akonadi merkuro korganizer qt6-qtlocation

@@ -33,4 +33,3 @@ sed -i '/<entry name="wheelEnabled"/,/<\/entry>/ s/<default>[^<]*<\/default>/<de
 
 # Add to ujust airglow entries
 echo 'import "/usr/share/ublue-os/just/80-airglow.just"' >> /usr/share/ublue-os/justfile
-echo 'import "/usr/share/ublue-os/just/82-airglow-waydroid.just"' >> /usr/share/ublue-os/justfile
