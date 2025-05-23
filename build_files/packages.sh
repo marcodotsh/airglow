@@ -63,5 +63,3 @@ sed -i~ -E 's/=.\$\(command -v (nft|ip6?tables-legacy).*/=/g' /usr/lib/waydroid/
 curl -Lo /usr/bin/waydroid-choose-gpu https://raw.githubusercontent.com/KyleGospo/waydroid-scripts/main/waydroid-choose-gpu.sh
 chmod +x /usr/bin/waydroid-choose-gpu
 
-# Install dependencies for WinApps
-rpm-ostree install dialog
