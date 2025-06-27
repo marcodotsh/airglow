@@ -38,15 +38,15 @@ rm -rf papirus-icon-theme
 # Install polonium KWin script for tiling
 cd $(mktemp -d)
 curl -L https://github.com/zeroxoneafour/polonium/releases/download/nightly/polonium.kwinscript -o polonium-kwinscript.zip
-kpackagetool6 --type KWin/Script --global --install polonium-kwinscript.zip
+XDG_DATA_DIRS="/usr/local/share:/usr/share" kpackagetool6 --type KWin/Script --global --install polonium-kwinscript.zip
 
 # Install Geometry Change effect for smooth animations
 curl -L https://github.com/peterfajdiga/kwin4_effect_geometry_change/releases/download/v1.3/kwin4_effect_geometry_change_1_3.tar.gz -o kwin4_effect_geometry_change_1_3.tar.gz
-kpackagetool6 --type KWin/Effect --global --install kwin4_effect_geometry_change_1_3.tar.gz
+XDG_DATA_DIRS="/usr/local/share:/usr/share" kpackagetool6 --type KWin/Effect --global --install kwin4_effect_geometry_change_1_3.tar.gz
 
 # Install window title applet to get current window icon widget
 curl -L https://github.com/dhruv8sh/plasma6-window-title-applet/archive/refs/heads/master.zip -o plasma6-window-title-applet.zip
-kpackagetool6 --type Plasma/Applet --global --install plasma6-window-title-applet.zip
+XDG_DATA_DIRS="/usr/local/share:/usr/share" kpackagetool6 --type Plasma/Applet --global --install plasma6-window-title-applet.zip
 
 # Install clevis-dracut to use tang LUKS unlock over home network
 rpm-ostree install clevis-dracut
