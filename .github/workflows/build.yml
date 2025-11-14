@@ -37,7 +37,7 @@ jobs:
           - nvidia
           - surface
         fedora_version:
-          - 42
+          - 43
 
     steps:
       # Checkout push-to-registry action GitHub repository
