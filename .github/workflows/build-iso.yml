@@ -19,8 +19,6 @@ jobs:
       matrix:
         image_flavor:
           - main
-          - nvidia
-          - surface
         base_name:
           - airglow
         fedora_version:

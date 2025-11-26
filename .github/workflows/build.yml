@@ -34,8 +34,6 @@ jobs:
       matrix:
         image_flavor:
           - main
-          - nvidia
-          - surface
         fedora_version:
           - 43
 
