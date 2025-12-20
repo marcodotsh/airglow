@@ -55,4 +55,17 @@ rpm-ostree install clevis-dracut
 rpm-ostree install libcamera libcamera-tools libcamera-gstreamer libcamera-ipa pipewire-plugin-libcamera
 
 # Install merkuro (KDE calendar, tasks, contacts)
-rpm-ostree install akonadi merkuro korganizer qt6-qtlocation qt6-qtpositioning kdepim-runtime kf6-kirigami-addons
+rpm-ostree install \
+  merkuro \
+  korganizer \
+  akonadi \
+  akonadiconsole \
+  kdepim-runtime \
+  kdepim-addons \
+  kf6-kirigami-addons \
+  qt6-qtlocation \
+  qt6-qtpositioning \
+  qt6-qt5compat \
+  kaccounts-integration \
+  kaccounts-providers \
+  mariadb
