@@ -77,7 +77,7 @@ rpm-ostree install \
   kdepim-runtime \
   kdepim-addons \
   kf6-kirigami-addons \
-  ktextaddons \
+  ktextaddons-qt6 \
   grantlee-editor \
   kaccounts-integration \
   kaccounts-providers \
