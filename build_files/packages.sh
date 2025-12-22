@@ -57,15 +57,33 @@ rpm-ostree install libcamera libcamera-tools libcamera-gstreamer libcamera-ipa p
 # Install merkuro (KDE calendar, tasks, contacts)
 rpm-ostree install \
   merkuro \
+  kontact \
+  kmail \
   korganizer \
+  kaddressbook \
+  zanshin \
+  akregator \
+  knotes \
+  itinerary \
+  kleopatra \
+  kalarm \
+  kmail-account-wizard \
+  pim-data-exporter \
+  pim-sieve-editor \
+  mbox-importer \
   akonadi \
+  akonadi-search \
   akonadiconsole \
   kdepim-runtime \
   kdepim-addons \
   kf6-kirigami-addons \
+  ktextaddons \
+  grantlee-editor \
+  kaccounts-integration \
+  kaccounts-providers \
+  signon-kwallet-extension \
   qt6-qtlocation \
   qt6-qtpositioning \
   qt6-qt5compat \
-  kaccounts-integration \
-  kaccounts-providers \
+  qt6-qtwebengine \
   mariadb
