@@ -89,5 +89,5 @@ rpm-ostree install \
   mariadb
 
 # Install Antigravity
-sudo dnf install antigravity
+rpm-ostree install antigravity
 
