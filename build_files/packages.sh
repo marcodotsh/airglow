@@ -87,3 +87,7 @@ rpm-ostree install \
   qt6-qt5compat \
   qt6-qtwebengine \
   mariadb
+
+# Install Antigravity
+sudo dnf install antigravity
+
