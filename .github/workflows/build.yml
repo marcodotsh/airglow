@@ -148,13 +148,9 @@ jobs:
           build-args: |
             BASE_IMAGE_NAME=${{ env.BASE_IMAGE_NAME }}
             FEDORA_MAJOR_VERSION=${{ matrix.fedora_version }}
-          # Enable granular Docker layer caching
+          # Docker layer caching via GHA cache.
           cache-from: type=gha
-          cache-to: type=gha,mode=max
-      # This section is optional and only needs to be enabled in you plan on distributing
-      # your project to others to consume. You will need to create a public and private key
-      # using Cosign and save the private key as a repository secret in Github for this workflow
-      # to consume. For more details, review the image signing section of the README.
+          cache-to: type=gha,mode=min
 
       # Sign container
       - uses: sigstore/cosign-installer@v3.5.0

@@ -97,7 +97,7 @@ jobs:
           docker rmi ${image}
 
       - name: Build ISOs
-        uses: jasonn3/build-container-installer@v1.3.0
+        uses: jasonn3/build-container-installer@v1.4.0
         id: build
         with:
           arch: x86_64
@@ -133,4 +133,3 @@ jobs:
           retention-days: 7
           compression-level: 0
           overwrite: true
-
