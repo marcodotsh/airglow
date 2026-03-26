@@ -13,12 +13,7 @@ Rows=1
 
 [Plugins]
 kwin4_effect_geometry_changeEnabled=true
-poloniumEnabled=true
-
-[Script-polonium]
-Borders=3
-EngineType=1
-InsertionPoint=1
+krohnkiteEnabled=true
 
 [TabBox]
 DesktopMode=0

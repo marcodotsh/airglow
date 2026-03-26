@@ -35,10 +35,12 @@ mv papirus-icon-theme/Papirus /usr/share/icons/Papirus
 mv papirus-icon-theme/Papirus-Dark /usr/share/icons/Papirus-Dark
 rm -rf papirus-icon-theme
 
-# Install polonium KWin script for tiling
+# Install Krohnkite KWin script for tiling
 cd $(mktemp -d)
-curl -L https://github.com/zeroxoneafour/polonium/releases/download/nightly/polonium.kwinscript -o polonium-kwinscript.zip
-kpackagetool6 --type KWin/Script --packageroot /usr/share/kwin/scripts --install polonium-kwinscript.zip
+KROHNKITE_JSON="$(curl -s https://codeberg.org/api/v1/repos/anametologin/Krohnkite/releases/latest)"
+KROHNKITE_TAG="$(printf '%s' "$KROHNKITE_JSON" | sed -n 's/.*"tag_name":"\([^"]*\)".*/\1/p')"
+curl -L "https://codeberg.org/anametologin/Krohnkite/releases/download/$KROHNKITE_TAG/krohnkite.kwinscript" -o krohnkite.kwinscript
+kpackagetool6 --type KWin/Script --packageroot /usr/share/kwin/scripts --install krohnkite.kwinscript
 
 # Install Geometry Change effect for smooth animations
 curl -L https://github.com/peterfajdiga/kwin4_effect_geometry_change/releases/download/v1.3/kwin4_effect_geometry_change_1_3.tar.gz -o kwin4_effect_geometry_change_1_3.tar.gz
