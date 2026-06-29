@@ -35,7 +35,7 @@ jobs:
         image_flavor:
           - main
         fedora_version:
-          - 43
+          - 44
 
     steps:
       - name: Free Disk Space (Ubuntu)
