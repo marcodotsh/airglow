@@ -148,6 +148,8 @@ jobs:
           build-args: |
             BASE_IMAGE_NAME=${{ env.BASE_IMAGE_NAME }}
             FEDORA_MAJOR_VERSION=${{ matrix.fedora_version }}
+          # Force pulling the latest parent base image on build
+          pull: true
           # Docker layer caching via GHA cache.
           cache-from: type=gha
           cache-to: type=gha,mode=min
